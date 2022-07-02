@@ -234,3 +234,32 @@ input {
 .nav_link:hover {
     color: var(--first-color);
 }
+
+.contador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+
+.contador button {
+    margin-left: 2.5px;
+    background-color: var(--body-color);
+}
+
+.contador h3 {
+    align-items: center;
+    justify-items: center;
+    font-size: 30px;
+}
+
+.add,
+.minus {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.result {
+    font-size: 25px;
+}

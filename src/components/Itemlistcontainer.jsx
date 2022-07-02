@@ -1,7 +1,14 @@
 import React from "react";
-const Cartnumber = (props)=>{
+import ItemCount from "./ItemCount";
+const Cartnumber = ()=>{
     return(
-            <p><i class="bx bx-shopping-bag"></i>{props.numbers}</p>
+            <div className="contador">
+            <ItemCount 
+                stock={5} 
+                initial={1}
+                onAdd={(n) => alert(`Agregaados ${n} productos`)}
+            ></ItemCount>
+            </div>
     );
 };
 export default Cartnumber;
