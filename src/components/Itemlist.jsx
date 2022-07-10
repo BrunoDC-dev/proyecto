@@ -1,16 +1,13 @@
 import React from "react";
 import Item from "./Item";
-import data from "../data";
-
-const  ItemList = ()=>{
-    console.warn(data.prodcutData)
+const  ItemList = ({products})=>{
     return(
         <div>
-           <h1>Todos los productos</h1>
-           <div>
-                {data.prodcutData.map((item, index)=>{
+           <h1 className="itemlist-title">Todos los productos</h1>
+           <div className="product-container">
+                {products.map((product)=>{
                     return(
-                        <Item pictureUrl={item.img} title={item.title} price={item.price} key={index}></Item>
+                        <Item key={product.id} product={product}></Item>
                     )
                 })}
            </div>

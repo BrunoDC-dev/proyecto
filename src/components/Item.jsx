@@ -1,11 +1,17 @@
 import React from "react";
-const Item = (props)=>{
+const Item = ({ product })=>{
+    const{img, title,price} = product;
     return(
-        <div>
-            <img src={props.pictureUrl} alt={props.title} />
-            <h2>{props.title}</h2>
-            <h3>{props.price}</h3>
+        
+        <div className="product-box">
+            <div>
+            <img src={img} alt={title} />
+            </div>
+            <h2>{title}</h2>
+            <div className="product-details">
+            <h3>{price}</h3>
             <button>Comprar</button>
+            </div>
         </div>
     )
 }
