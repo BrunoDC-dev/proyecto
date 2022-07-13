@@ -1,16 +1,19 @@
 import React from "react";
+import DetailItem from "./Itemdetail";
+
 const Item = ({ product })=>{
-    const{img, title,price} = product;
+    const{img, title, details,price} = product;
     return(
         
         <div className="product-box">
             <div>
             <img src={img} alt={title} />
             </div>
-            <h2>{title}</h2>
+            <h2 className="title_product">{title}</h2>
             <div className="product-details">
-            <h3>{price}</h3>
-            <button>Comprar</button>
+            <DetailItem 
+            price={price}
+            details={details}></DetailItem>
             </div>
         </div>
     )

@@ -245,7 +245,6 @@ input {
 
 .contador button {
     margin-left: 2.5px;
-    background-color: var(--body-color);
 }
 
 .contador h3 {
@@ -274,15 +273,60 @@ input {
 
 .product-container {
     display: flex;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .product-box {
     background-color: var(--bg-black-50);
+    width: 200px;
+    max-height: fit-content;
     padding: 10px;
     margin: 5px;
+    border-radius: 40px;
 }
 
 .product-details {
     display: flex;
     justify-content: space-between;
+}
+
+.title_product {
+    text-align: center;
+    transition: all 1s;
+}
+
+.details_product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_price {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.product_price p {
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+}
+
+.product_button {
+    background-color: var(--first-color);
+    color: #fdf9ff;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.product_button:hover {
+    background-color: var(--text-black-900);
+    color: var(--first-color);
 }
