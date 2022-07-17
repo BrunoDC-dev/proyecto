@@ -1,8 +1,8 @@
 import React from "react";
-import DetailItem from "./Itemdetail";
+import { Link } from "react-router-dom";
 
 const Item = ({ product })=>{
-    const{img, title, details,price} = product;
+    const{id,img, title,} = product;
     return(
         
         <div className="product-box">
@@ -11,9 +11,7 @@ const Item = ({ product })=>{
             </div>
             <h2 className="title_product">{title}</h2>
             <div className="product-details">
-            <DetailItem 
-            price={price}
-            details={details}></DetailItem>
+            <button><Link to={`/product/${id}`}> Ver detalles del producto</Link></button>
             </div>
         </div>
     )

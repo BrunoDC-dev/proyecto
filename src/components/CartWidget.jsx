@@ -1,5 +1,4 @@
 import React from "react";
-import Cartnumber from "./Itemlistcontainer";
 const Cart = ()=>{
     return(
         <div class="nav_btns">
