@@ -255,12 +255,19 @@ input {
 
 .add,
 .minus {
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 500;
+    margin-left: 5px;
+    background-color: var(--body-color);
 }
 
 .result {
-    font-size: 25px;
+    font-size: 15px;
+}
+
+.multiplier {
+    margin-left: 5px;
+    display: flex;
 }
 
 .itemlist-title {
@@ -456,4 +463,20 @@ button.button_link {
 .button_link:hover {
     background-color: var(--text-black-700);
     color: var(--first-color);
+}
+
+.itemcount {
+    display: flex;
+    align-items: center;
+}
+
+.itemcount p {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.count_box {
+    display: flex;
+    align-items: center;
 }
