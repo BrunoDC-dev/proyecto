@@ -1,11 +1,11 @@
 import React from "react";
-import { useState } from "react";
-import products from "../detail";
-const ItemCount= ({stock,initial,onAdd,price})=>{
+import { useState} from "react";
+import { Link } from "react-router-dom";
+const ItemCount= ({initial,addItem,price,item})=>{
     const[count, setCount] = useState(initial);
     const[resutl, setResult]= useState(count*price)
     const incrementar = ()=>{
-        if(count < stock) {
+        if(count < 100) {
             setCount( count + 1);
             setResult((count + 1)*price)
         } else {
@@ -19,28 +19,25 @@ const ItemCount= ({stock,initial,onAdd,price})=>{
                 }
     }
     return(
-            <><div className="multiplier">
-                <div className="count_box">
-                 
-                    <h3>x{count}</h3>
-                <    button className="minus" onClick={decrementar}>-</button>
-                    <button className="result"
-                    onClick={() => {
-                    if (count <= stock) {
-                    onAdd(count);
-                    } else {
-                    alert("no hay suficientes productos");
-                     }
-                    } }></button>
-                    <button className="add" onClick={incrementar}>+</button>
-            
-                </div>
-                <div className="itemcount">
-                    <p>Total:</p>
-                    <p>${resutl}</p>
-                    <h3>stock: {stock}</h3>
-                </div>
+            <>
+        <div className="itemcount_container"> 
+            <div className="count_box">
+                <p className="itemprice"><span>$</span>{price}</p>
+                <h3 className="times">x {count}</h3>
+                <button className="minus" onClick={decrementar}>-</button>
+                <button className="add" onClick={incrementar}>+</button>
             </div>
+            <div className="itemcount">
+                <p>Total:</p>
+                <p className="resultado">${resutl}</p>
+            </div>
+            <div className="button_container">
+            <button className="product_button fix"onClick={() => addItem(item,count,resutl)}>
+                    Agregar al carrito</button>
+             <button className="product_button detial_button" >  <Link to={'/cart'} className="button_link">Ver Carrito</Link></button> 
+            </div>
+        </div>
+                        
             </>
     );
 }

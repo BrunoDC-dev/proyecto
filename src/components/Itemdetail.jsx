@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Footer from "./Footer";
 import Navmain from "./NavMain";
 import { useParams, Link} from "react-router-dom";
@@ -12,6 +12,7 @@ import new_1 from '../img/new-1.png'
 import new_2 from '../img/new-2.png'
 import new_6 from '../img/new-6.png'
 import ItemCount from "./ItemCount";
+import CartContext from "../context/CartContext";
 const DetailItem = ()=>{
     const {id}= useParams();
     const product = [{
@@ -91,6 +92,7 @@ const DetailItem = ()=>{
 
     }
 ];
+const {addItem} = useContext(CartContext)
 
     return(<>
         <Navmain></Navmain>
@@ -107,15 +109,14 @@ const DetailItem = ()=>{
                     <div>
                     <p className="detail_detail">{product.details}</p>
                     <div className="detail_box">
-                    <p className="detail_price">${product.price}</p>
                     <ItemCount 
+                        item={product}
                         stock={product.stock} 
                         initial={1}
-                        onAdd={(n) => alert(`Agregaados ${n} productos`)}
-                        price={product.price}>   
+                        addItem= {addItem}
+                        price={product.price}>                  
                     </ItemCount> 
                     </div>
-                    <button className="product_button detial_button"><Link to={`/product/${id}/cart`}className="button_link">Comprar</Link></button>
                     </div>
                 </div>
                </div>
