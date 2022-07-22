@@ -628,3 +628,37 @@ span {
     margin-top: 60px;
     align-items: baseline;
 }
+
+.empty_cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty_cart h3 {
+    font-size: 50px;
+    margin-top: 50px;
+    color: darkgray;
+    margin-bottom: 100px;
+}
+
+.empty_cart button {
+    font-size: 28px;
+    margin-top: 40px;
+    background-color: var(--first-color);
+    border-radius: 40px;
+    padding: 18px;
+}
+
+.link_empty {
+    color: #fff;
+    text-decoration: none;
+}
+
+.empty_cart button:hover {
+    background-color: #151515;
+}
+
+.link_empty:hover {
+    color: var(--first-color);
+}

@@ -37,8 +37,12 @@ export const  CartProvider =({children}) =>{
             button: "Continuar",
           });
     }
+    let itemsInCart = 0;
+    items.map((item)=>{
+        itemsInCart = itemsInCart + item.qty;
+        })  
     return(
-    <CartContext.Provider value={{items, addItem, removeItem,clearItems,purchaseitems}}>
+    <CartContext.Provider value={{items, addItem, removeItem,clearItems,purchaseitems, itemsInCart}}>
         {children}
     </CartContext.Provider>
 )
