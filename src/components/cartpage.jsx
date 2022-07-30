@@ -1,11 +1,13 @@
 import React,{useContext} from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../context/CartContext";
+import Buypage from "./Buypage";
+import { sendOrder } from "./firebase";
 import Footer from "./Footer";
 import Navmain from "./NavMain";
-const CartPage = ()=>{
-    const {items, removeItem, clearItems,purchaseitems,itemsInCart}= useContext(CartContext);
 
+const CartPage = ()=>{
+    const {items, removeItem,itemsInCart}= useContext(CartContext);
     if (itemsInCart == 0) {
         return(
             <>
@@ -62,11 +64,8 @@ const CartPage = ()=>{
                         </div>
                     </div>
                 ))}
-                <div className="clean_box">
-                <h2 className="clean_cart" onClick={()=> purchaseitems()}> Finalizar Compra</h2>
-                <h2 className="clean_cart" onClick={()=> clearItems()}>Vaciar Carrito</h2>
-                </div>
             </div>
+            <Buypage></Buypage> 
             <Footer></Footer>
             </>
         );

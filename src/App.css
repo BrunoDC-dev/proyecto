@@ -662,3 +662,81 @@ span {
 .link_empty:hover {
     color: var(--first-color);
 }
+
+.login_container {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.login_box {
+    background-color: var(--bg-black-50);
+    padding: 30px;
+    border-radius: 60px;
+}
+
+.login_title {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.login_title h3 {
+    font-size: 30px;
+    color: var(--first-color);
+    margin-bottom: 5px;
+}
+
+.login_title p {
+    color: #151515;
+    font-size: 20px;
+}
+
+.login_details {
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.login_flex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.login_text {
+    color: #222222;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 8px;
+}
+
+.login_icon {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.login_icon i {
+    font-size: 18px;
+}
+
+.login_input {
+    background-color: var(--body-color);
+    padding: 5px;
+    margin-top: 3px;
+    border-radius: 15px;
+}
+
+.login_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+.login_buttons .arr {
+    font-size: 20px;
+    height: 60px;
+    width: 200px;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./Itemlist";
-/*import getData from "../data";*/
+import getData from "../data";
 import {initializeApp} from 'firebase/app'
 import{query,collection, doc,getDoc,getDocs,getFirestore} from 'firebase/firestore'
 const Cartnumber = ()=>{
@@ -26,9 +26,9 @@ const Cartnumber = ()=>{
     setLoading(false)
     })
   })
-   /* const [products, setProducts] = useState([]);*/
+   /*const [products, setProducts] = useState([]);*/
   const [loading, setLoading] = useState(true);
-  /**useEffect(() => {
+ /* useEffect(() => {
     getData
       .then((data) => {
         setProducts(data);
@@ -39,7 +39,7 @@ const Cartnumber = ()=>{
       .finally(() => {
         setLoading(false);
       });
-  }, []);*/
+  }, [])*/;
     return(
             <div className="contador">
             <div className="prodcut_list">

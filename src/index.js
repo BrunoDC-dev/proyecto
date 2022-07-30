@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import DetailItem from './components/Itemdetail';
 import CartPage from './components/cartpage';
 import { CartProvider } from './context/CartContext';
+import Buypage from './components/Buypage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 

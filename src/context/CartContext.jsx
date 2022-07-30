@@ -1,6 +1,8 @@
 
 import React, {createContext,useState,useContext} from "react";
 import swal from "sweetalert";
+import { SendOrder } from "../components/firebase";
+
 const CartContext = createContext({});
 export const  CartProvider =({children}) =>{
     const [items, setItems]= useState([])
@@ -8,8 +10,7 @@ export const  CartProvider =({children}) =>{
         const found = items.find(item => item.id == id);
         return found
     }
-    const addItem = (item,count,result)=>{
-        console.log(items)
+    const addItem = (item,count,result,price)=>{
         isIncart(item.id)
         ?
         setItems(items.map((prod)=>{
@@ -21,6 +22,7 @@ export const  CartProvider =({children}) =>{
         }))
         :
         setItems([...items,{id: item.id, img:item.img,result:result, name:item.title,price:item.price,qty:count}])
+
     }
     const removeItem =(id)=>{
         setItems(items.filter(item=>item.id!==id))
@@ -28,8 +30,9 @@ export const  CartProvider =({children}) =>{
     const clearItems=()=>{
         setItems([]);
     }
-    const purchaseitems=()=>{
-        setItems([])
+    const purchaseitems=(items,nameValue,phoneValue,emailValue)=>{
+        SendOrder(items,nameValue,phoneValue,emailValue);
+        setItems([]);
         swal({
             title: "Compra realizada",
             text: "Gracias por tu compra",

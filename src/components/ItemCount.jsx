@@ -32,7 +32,7 @@ const ItemCount= ({initial,addItem,price,item})=>{
                 <p className="resultado">${resutl}</p>
             </div>
             <div className="button_container">
-            <button className="product_button fix"onClick={() => addItem(item,count,resutl)}>
+            <button className="product_button fix"onClick={() => addItem(item,count,resutl,price)}>
                     Agregar al carrito</button>
              <button className="product_button detial_button" >  <Link to={'/cart'} className="button_link">Ver Carrito</Link></button> 
             </div>
