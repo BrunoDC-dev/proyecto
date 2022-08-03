@@ -2,7 +2,6 @@ import React,{useContext} from "react";
 import { Link } from "react-router-dom";
 import CartContext from "../context/CartContext";
 import Buypage from "./Buypage";
-import { sendOrder } from "./firebase";
 import Footer from "./Footer";
 import Navmain from "./NavMain";
 

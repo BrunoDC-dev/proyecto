@@ -1,8 +1,7 @@
 
-import React, {createContext,useState,useContext} from "react";
+import React, {createContext,useState} from "react";
 import swal from "sweetalert";
 import { SendOrder } from "../components/firebase";
-
 const CartContext = createContext({});
 export const  CartProvider =({children}) =>{
     const [items, setItems]= useState([])
@@ -22,7 +21,6 @@ export const  CartProvider =({children}) =>{
         }))
         :
         setItems([...items,{id: item.id, img:item.img,result:result, name:item.title,price:item.price,qty:count}])
-
     }
     const removeItem =(id)=>{
         setItems(items.filter(item=>item.id!==id))

@@ -19,7 +19,7 @@ const ItemCount= ({initial,addItem,price,item})=>{
                 }
     }
     return(
-            <>
+     <>
         <div className="itemcount_container"> 
             <div className="count_box">
                 <p className="itemprice"><span>$</span>{price}</p>
@@ -36,9 +36,8 @@ const ItemCount= ({initial,addItem,price,item})=>{
                     Agregar al carrito</button>
              <button className="product_button detial_button" >  <Link to={'/cart'} className="button_link">Ver Carrito</Link></button> 
             </div>
-        </div>
-                        
-            </>
+        </div>          
+     </>
     );
 }
 export default ItemCount;

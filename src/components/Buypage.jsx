@@ -1,7 +1,5 @@
 import React,{useContext,useState} from "react";
-import { Link } from "react-router-dom";
 import CartContext from "../context/CartContext";
-
 const Buypage = ()=>{
     let[nameValue, setNameValue] = useState("");
     let[phoneValue, setPhoneValue] = useState()
@@ -40,7 +38,7 @@ const Buypage = ()=>{
                 </div>
             </div>
             <div className="login_buttons">
-                <input type="submit" className="product_button arr" onClick={()=> purchaseitems(items,nameValue,phoneValue,emailValue)}/>
+            <button className="product_button arr" onClick={()=> purchaseitems(items,nameValue,phoneValue,emailValue)}>Enviar compra</button>
                 <button className="product_button arr" onClick={clearItems}>Cancelar compra</button>
             </div>
         </div>

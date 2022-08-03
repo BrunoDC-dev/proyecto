@@ -41,7 +41,6 @@ const Footer = ()=>{
         </div>
         <span class="footer_copy">&#169; brunodecruz.05@gmail.com. Todos los derechos reservados</span>
     </footer>
-
     );
 };
 export default Footer;

@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 const Item = ({ product })=>{
     const{id,img, title,} = product;
     return(
-        
         <div className="product-box">
             <div>
             <img src={img} alt={title} />
