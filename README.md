@@ -23,4 +23,4 @@ Los links que se encuentra en el Navbar no cuentan con funcionalidad actual. Ade
 
 El proyecto obtiene los datos de los productos a través de Firebase y los muestra a través de un map. A la hora de hacer click en el producto el id es pasado a través del useparams al ItemDetail.jsx. El cual filtra los productos obtenidos originalmente y encuentra l información sobre el mismo. Después de agregar los productos al carrito, estos serán mostrados en Cartpage.jsx. Por ultimo e debe llenar el formulario para que este sea enviado como orden de compra a Firebase.
 
-Bruno De cruz .gif
+![GIF Ecomerce Bruno De CRUZ](https://user-images.githubusercontent.com/96153147/183527931-dccf170c-1943-4ee9-bf0d-e5e951603c77.gif)
