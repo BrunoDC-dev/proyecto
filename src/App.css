@@ -740,3 +740,23 @@ span {
     height: 60px;
     width: 200px;
 }
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    justify-items: center;
+    align-items: center;
+}
+
+.category-container h1 {
+    font-size: 40px;
+}
+
+.product-container-category {
+    display: flex;
+    max-width: 800px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}

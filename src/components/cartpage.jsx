@@ -10,7 +10,7 @@ const CartPage = ()=>{
     if (itemsInCart == 0) {
         return(
             <>
-                <Navmain></Navmain>
+                <Navmain/>
                     <div className="cart_title">
                     <h1 >Tu Carrito:</h1>
                     </div>
@@ -24,13 +24,13 @@ const CartPage = ()=>{
                             <button >  <Link to={'/inicio'} className="link_empty">Ver Productos</Link></button> 
                         </div>
                     </div>
-                    <Footer></Footer>
+                    <Footer/>
             </>
         );
     }if (itemsInCart>0) {
         return(
             <>
-             <Navmain></Navmain>
+             <Navmain/>
              <div className="cart_title">
              <h1 >Tu Carrito:</h1>
              </div>
@@ -64,8 +64,8 @@ const CartPage = ()=>{
                     </div>
                 ))}
             </div>
-            <Buypage></Buypage> 
-            <Footer></Footer>
+            <Buypage/>
+            <Footer/>
             </>
         );
     }else{

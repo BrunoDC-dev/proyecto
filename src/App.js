@@ -7,9 +7,9 @@ import Navmain from './components/NavMain';
 function App() {
     return ( 
         <>
-        <Navmain></Navmain>
-        <Cartnumber></Cartnumber>
-        <Footer></Footer>
+        <Navmain/>
+        <Cartnumber/>
+        <Footer/>
         </>
     );
 }

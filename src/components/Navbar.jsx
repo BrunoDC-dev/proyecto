@@ -1,20 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const menuItems= [
     { 
-        id:"1",
-        label:"Inicio",
-    },
-    { 
         id:"2",
-        label:"Tienda",
+        label:"Abrigos",
     },
     { 
         id:"3",
-        label:"Carrito",
+        label:"Buzos",
     },
     { 
         id:"5",
-        label:"Contacto",
+        label:"Remeras",
     },
 ];
 const NavBar = ()=>{
@@ -22,7 +19,7 @@ const NavBar = ()=>{
                 <ul class="nav_list">
                     {menuItems.map((item)=>(
                         <li class="nav_item">
-                        <a href="#" class="nav_link " key={item.id}>{item.label}</a>
+                        <Link to={`/producto/${item.label}`} class="nav_link " key={item.id}>{item.label}</Link>
                         </li> 
                     ))}
                 </ul>

@@ -6,11 +6,11 @@ const Navmain=()=>{
     return(
         <header class="header" id="header">
         <nav class="nav container">
-        <Link to={`/inicio`}class="nav_logo"> <i class="bx bxs-shopping-bags nav_logo-icon"> GUSMY </i></Link>
+        <Link to={`/`}class="nav_logo"> <i class="bx bxs-shopping-bags nav_logo-icon"> GUSMY </i></Link>
             <div class="nav_menu" id="nav-menu">
-                <NavBar></NavBar>
+                <NavBar/>
             </div>
-                <Cart></Cart>
+                <Cart/>
         </nav>
     </header>
     );
