@@ -14,6 +14,7 @@ const products = [{
         title: "Saco",
         img: product_1,
         stock: 3,
+        catetgoryId: "Abrigos",
     },
     {
         price: 6000,
@@ -22,6 +23,7 @@ const products = [{
         title: "Campera",
         img: product_2,
         stock: 2,
+        catetgoryId: "Abrigos",
     },
     {
         price: 3500,
@@ -30,6 +32,7 @@ const products = [{
         title: "Remera",
         img: product_3,
         stock: 5,
+        catetgoryId: "Remeras",
     },
     {
         price: 10500,
@@ -38,7 +41,7 @@ const products = [{
         title: "Campera Impermiable",
         img: cart_3,
         stock: 4,
-
+        catetgoryId: "Abrigos",
     },
     {
         price: 4500,
@@ -47,6 +50,7 @@ const products = [{
         title: "Sueter",
         img: cart_2,
         stock: 3,
+        catetgoryId: "Buzos",
     },
     {
         price: 9000,
@@ -55,6 +59,7 @@ const products = [{
         title: "Abrigo de Invierno",
         img: new_1,
         stock: 7,
+        catetgoryId: "Abrigos",
     },
     {
         price: 11000,
@@ -63,7 +68,7 @@ const products = [{
         title: "Campera Extensa",
         img: product_4,
         stock: 2,
-
+        catetgoryId: "Abrigos",
     },
     {
         price: 10500,
@@ -72,7 +77,7 @@ const products = [{
         title: "Campera nike",
         img: new_6,
         stock: 4,
-
+        catetgoryId: "Abrigos",
     },
     {
         price: 13500,
@@ -81,7 +86,7 @@ const products = [{
         title: "Campera deportiva Jordan",
         img: new_2,
         stock: 3,
-
+        catetgoryId: "Buzos",
     }
 ];
 const getData = new Promise((resolve, reject) => {
