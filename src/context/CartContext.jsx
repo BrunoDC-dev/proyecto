@@ -11,7 +11,7 @@ export const CartProvider = ({ children }) => {
     const found = items.find((item) => item.id == id);
     return found;
   };
-  const addItem = (item, count, result, price) => {
+  const addItem = (item, count, result) => {
     isIncart(item.id)
       ? setItems(
           items.map((prod) => {
@@ -54,12 +54,18 @@ export const CartProvider = ({ children }) => {
   items.forEach((element) => {
     itemsInCart = +element.qty;
   });
-  getDocs(colRef).then((snp)=>{
-    setProducto(snp.docs.map((doc)=>({...doc.data()})))
-  })
-  .finally(()=>{
-    setLoading(false)
-  })
+  if (loading == true) {
+    getDocs(colRef)
+      .then((snp) => {
+        setProducto(snp.docs.map((doc) => ({ ...doc.data() })));
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+  if (loading == false) {
+    console.log("pedido realizado");
+  }
   return (
     <CartContext.Provider
       value={{
