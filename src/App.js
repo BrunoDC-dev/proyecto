@@ -1,13 +1,13 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import Cartnumber from "./components/Itemlistcontainer";
-import Navmain from "./components/NavMain";
+import Footer from "./components/Footer/Footer";
+import Navmain from "./components/NavBar/NavMain";
+import HomeMaiN from "./components/HomePage/HomeMain";
 
 function App() {
   return (
     <>
       <Navmain />
-      <Cartnumber />
+      <HomeMaiN />
       <Footer />
     </>
   );

@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, getFirestore, addDoc }from "firebase/firestore";
+import { collection, getFirestore, addDoc } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyAzjO0Quku2T7XrVnAhxqyZbzcaCH7buLY",
   authDomain: "coderhouse-e-comerce.firebaseapp.com",
@@ -10,8 +10,8 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-export const colRef = collection(db,'items');
-
+export const colRef = collection(db, "items");
+export const addRef = collection(db, "add");
 export const sendOrder = (item, nameValue, phoneValue, emailValue) => {
   const db = getFirestore();
   const ordersCollection = collection(db, "orders");

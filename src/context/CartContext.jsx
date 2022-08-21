@@ -1,16 +1,50 @@
 import React, { createContext, useState } from "react";
 import swal from "sweetalert";
-import { colRef, sendOrder } from "../Firebase/Firebase";
+import { addRef, colRef, sendOrder } from "../Firebase/Firebase";
 import { getDocs } from "firebase/firestore";
 const CartContext = createContext({});
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [producto, setProducto] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [addItems, setAddItems] = useState([]);
+  const [loadingAdd, setLoadingAdd] = useState(true);
   const isIncart = (id) => {
     const found = items.find((item) => item.id == id);
     return found;
   };
+  const menuItems = [
+    {
+      id: "2",
+      label: "Abrigos",
+    },
+    {
+      id: "3",
+      label: "Buzos",
+    },
+    {
+      id: "5",
+      label: "Remeras",
+    },
+  ];
+  const navbarItems = [
+    {
+      id: "1",
+      label: "Inicio",
+    },
+    {
+      id: "2",
+      label: "Tienda",
+    },
+    {
+      id: "4",
+      label: "FAQ",
+    },
+    {
+      id: "5",
+      label: "Sobre nosotros",
+    },
+  ];
   const addItem = (item, count, result) => {
     isIncart(item.id)
       ? setItems(
@@ -66,6 +100,18 @@ export const CartProvider = ({ children }) => {
   if (loading == false) {
     console.log("pedido realizado");
   }
+  if (loadingAdd == true) {
+    getDocs(addRef)
+      .then((snp) => {
+        setAddItems(snp.docs.map((doc) => ({ ...doc.data() })));
+      })
+      .finally(() => {
+        setLoadingAdd(false);
+      });
+  }
+  if (loadingAdd == false) {
+    console.log("pedido realizado");
+  }
   return (
     <CartContext.Provider
       value={{
@@ -77,6 +123,10 @@ export const CartProvider = ({ children }) => {
         itemsInCart,
         producto,
         loading,
+        menuItems,
+        navbarItems,
+        loadingAdd,
+        addItems,
       }}
     >
       {children}
