@@ -21,7 +21,7 @@ const CartPage = () => {
           <div>
             <button>
               {" "}
-              <Link to={"/"} className="link_empty">
+              <Link to={"/Tienda"} className="link_empty">
                 Ver Productos
               </Link>
             </button>
