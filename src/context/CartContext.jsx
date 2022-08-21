@@ -86,7 +86,8 @@ export const CartProvider = ({ children }) => {
   };
   let itemsInCart = 0;
   items.forEach((element) => {
-    itemsInCart = +element.qty;
+    itemsInCart = itemsInCart + element.qty;
+    console.log(items);
   });
   if (loading == true) {
     getDocs(colRef)
