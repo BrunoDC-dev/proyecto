@@ -9,15 +9,16 @@ Este proyecto buscar simular las funciones y el accionar de un carrito, a travé
 Se necesitan instalar un total de 4 dependencias. Primero y la más básica obtendremos mNPM con el comando `npm install` para obtener los componentes básicos para la creación de nuestra aplicación.
 
 Luego instalaremos React Router Dom con el comando `npm install react-router-dom` para obtener las funcionalidades del browser. 
-Con el fin de obtener las funcionalidades de las bases de datos instalaremos Firebase a través del comando `npm install firebase` por ultimo instalaremos SweetAlert a través de `npm install sweetalert`.
+Con el fin de obtener las funcionalidades de las bases de datos instalaremos Firebase a través del comando `npm install firebase`
+Ademas necesitaremos un swiper para el la HomePage, con este fin utilizremos el comando `npm i swiper`con esto obtenderemos ls herramients para crer nuestro swiper.
+por ultimo instalaremos SweetAlert a través de `npm install sweetalert`par obtenere una lert atrctiva para el usurio.
 
 ## Carpetas y distribución
 
-La creación de cualquier edición debe realizarse dentro de la carpeta de SRC. Si se busca agregar código para crear algún componente debe hacerse dentro de la carpeta componentes. Si se busca crear funciones que se vayan a utilizar a lo largo de la aplicación se recomiendo hacerlo dentro del archivo CartContext.jsx. Por ultimo cabe recalcar que todo el estilo de este proyecto se encuentre en el archivo app.css si se quiera editar el estilo debe hacerse en ese archivo.
+La creación de cualquier edición debe realizarse dentro de la carpeta de SRC. Si se busca agregar código para crear algún componente debe hacerse dentro de la carpeta componentes y dentro de la pagina deseada. En caso de creaar una pagina totalmente nueva debeb hcerse en caprt con el nombre de la pagina seguido de "PAGE". Si se busca crear funciones que se vayan a utilizar a lo largo de la aplicación se recomiendo hacerlo dentro del archivo CartContext.jsx. Por ultimo cabe recalcar que todo el estilo de este proyecto se encuentre en el archivo app.css si se quiera editar el estilo debe hacerse en ese archivo.
 
-## salvedades
-
-Los links que se encuentra en el Navbar no cuentan con funcionalidad actual. Además el proyecto todavía no cuenta con diseño responsive.
+## Salvedades
+ el proyecto todavía no cuenta con diseño responsive.
 
 ## Funcionabilidad
 
