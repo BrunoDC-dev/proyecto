@@ -8,9 +8,9 @@ const CategoryLink = ({ categoryId }) => {
     return (
       <div>
         <ul class="nav_list">
-          <li>
+          <li className="nav_item">
             <Link to={"/Tienda"} className="nav_link">
-              Todos los productos{" "}
+              Ver Todo{" "}
             </Link>
           </li>
           {menuItems

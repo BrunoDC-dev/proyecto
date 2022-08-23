@@ -11,6 +11,7 @@ const CartPage = () => {
     return (
       <>
         <Navmain />
+        <div className="container">
         <div className="cart_title">
           <h1>Tu Carrito:</h1>
         </div>
@@ -27,6 +28,7 @@ const CartPage = () => {
             </button>
           </div>
         </div>
+        </div>
         <Footer />
       </>
     );
@@ -35,6 +37,7 @@ const CartPage = () => {
     return (
       <>
         <Navmain />
+        <div className="container">
         <div className="cart_title">
           <h1>Tu Carrito:</h1>
         </div>
@@ -48,7 +51,7 @@ const CartPage = () => {
                 <div className="cart_name_box">
                   <h1>{item.name}</h1>
                   <h2>
-                    <span>Precio:</span> $ {item.price}
+                    <span>Precio:</span> ${item.price}
                   </h2>
                 </div>
                 <div className="cart_name_box">
@@ -67,6 +70,7 @@ const CartPage = () => {
           ))}
         </div>
         <Buypage />
+        </div>
         <Footer />
       </>
     );
