@@ -12,7 +12,7 @@ const Navmain = () => {
           <i class="bx bxs-shopping-bags nav_logo-icon"> GUSMY </i>
         </Link>
         <div class="nav_menu" id="nav-menu" aria-menu={menuOpen}>
-        <div class="nav_close" id="nav-close">
+          <div class="nav_close" id="nav-close">
             <i class="bx bx-x" onClick={() => setMenuOpen(!menuOpen)}></i>
           </div>
           <NavBar />
